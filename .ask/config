@@ -1,0 +1,45 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.4eaa6cea-c8bd-430a-b2d6-15d3775c0911",
+      "was_cloned": false,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "8d4b52c4967e7d11b36eb228f1175929"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "b6f106bf50d680991a88cd8623efa984"
+          },
+          "en-CA": {
+            "eTag": "b6f106bf50d680991a88cd8623efa984"
+          },
+          "en-GB": {
+            "eTag": "b6f106bf50d680991a88cd8623efa984"
+          },
+          "en-IN": {
+            "eTag": "b6f106bf50d680991a88cd8623efa984"
+          },
+          "en-AU": {
+            "eTag": "b6f106bf50d680991a88cd8623efa984"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:205332394851:function:GetUpAndMove",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/us-east-1_GetUpAndMove",
+            "functionName": "GetUpAndMove",
+            "handler": "index.handler",
+            "revisionId": "cfe2a767-a58b-4550-9a4c-bf26d585786d",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "get up and move",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ContinueIntent",
+          "slots": [],
+          "samples": [
+            "keep going",
+            "yes i'm ready for more",
+            "yes ready for more",
+            "ready for more",
+            "start",
+            "more",
+            "go",
+            "yep",
+            "yes"
+          ]
+        },
+        {
+          "name": "FinishIntent",
+          "slots": [],
+          "samples": [
+            "close",
+            "quit",
+            "finish",
+            "no",
+            "nah",
+            "no thanks",
+            "no thank you"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}

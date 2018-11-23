@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Get up and move"
+        },
+        "en-CA": {
+          "name": "Get up and move"
+        },
+        "en-IN": {
+          "name": "Get up and move"
+        },
+        "en-AU": {
+          "name": "Get up and move"
+        },
+        "en-GB": {
+          "name": "Get up and move"
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "GetUpAndMove",
+          "sourceDir": "lambda\\us-east-1_GetUpAndMove"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
