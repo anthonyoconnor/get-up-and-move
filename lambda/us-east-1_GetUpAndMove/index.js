@@ -14,6 +14,10 @@ const LaunchRequestHandler = {
     },
     handle(handlerInput) {
 
+        const attributesManager = handlerInput.attributesManager;
+        const sessionAttributes = attributesManager.getSessionAttributes();
+        sessionAttributes.usedActivities = [];
+
         const welcomeOutput = `Welcome to get up and move! You will need some room to move. 
     <break time= "0.8s" /> 
     Stand in the middle of the room and stretch your arms out.
@@ -39,7 +43,7 @@ const ContinueIntentHandler = {
     },
     handle(handlerInput) {
 
-        const speechOutput = getSetOfActivities() + ' ' + continueMessage;
+        const speechOutput = getSetOfActivities(handlerInput) + ' ' + continueMessage;
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -111,7 +115,7 @@ const ErrorHandler = {
     },
     handle(handlerInput, error) {
         console.log(`Error handled: ${error.message}`);
-        const message = `Sorry, I can\'t understand the command. ${continueMessage}`;
+        const message = `Sorry, I can't understand the command. ${continueMessage}`;
         return handlerInput.responseBuilder
             .speak(message)
             .reprompt(message)
@@ -134,24 +138,41 @@ exports.handler = skillBuilder
     .lambda();
 
 
-function getSetOfActivities() {
-    let nextActivities = getNextActivityIndexes(3, activities.length);
+function getSetOfActivities(handlerInput) {
+
+    const attributesManager = handlerInput.attributesManager;
+    const sessionAttributes = attributesManager.getSessionAttributes();
+
+    let usedActivities = sessionAttributes.usedActivities;
+    const numberOfActivities = 3;
+    if (usedActivities.length >= activities.length - numberOfActivities) {
+        usedActivities = [];
+    }
+
+    let nextActivities = getNextActivityIndexes(numberOfActivities, activities.length, usedActivities);
 
     let output = "";
 
     for (let index of nextActivities) {
         output += "<audio src='soundbank://soundlibrary/cartoon/amzn_sfx_boing_short_1x_01'/> " + activities[index];
+        usedActivities.push(index);
     }
 
-    console.log("Output is", output);
+    sessionAttributes.usedActivities = usedActivities;
+
     return output;
 }
 
-function getNextActivityIndexes(amount, activiesLength) {
+function getNextActivityIndexes(numberOfActivities, activiesLength, usedActivities) {
+    if (usedActivities.length >= activiesLength - numberOfActivities) {
+        usedActivities = [];
+    }
+
+    var usedSet = new Set(usedActivities);
     var set = new Set();
-    while (set.size < amount) {
+    while (set.size < numberOfActivities) {
         const index = Math.floor(Math.random() * activiesLength);
-        if (!set.has(index)) {
+        if (!usedSet.has(index) && !set.has(index)) {
             set.add(index);
         }
     }
