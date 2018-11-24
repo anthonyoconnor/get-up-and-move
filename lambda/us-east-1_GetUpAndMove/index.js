@@ -7,7 +7,7 @@ const activities = require('./activities');
 const appName = 'Get up and move';
 const continueMessage = 'Would you like to keep moving?';
 const finishMessage = 'Thanks for playing. Goodbye!';
-
+const welcomeReprompt = "Are you ready to move?";
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -26,8 +26,6 @@ const LaunchRequestHandler = {
     Make sure you are not touching anything or anybody. 
     <break time= "1s" /> 
     Are you ready to start?`;
-
-        const welcomeReprompt = "Are you ready to move?";
 
         return handlerInput.responseBuilder
             .speak(welcomeOutput)
@@ -74,11 +72,11 @@ const HelpIntentHandler = {
     },
     handle(handlerInput) {
         const speechText = `Stand in the middle of the room and make sure you have some space. 
-    Then follow my instructions.`;
+    Then follow my instructions. ` + welcomeReprompt;
 
         return handlerInput.responseBuilder
             .speak(speechText)
-            .reprompt(speechText)
+            .reprompt(welcomeReprompt)
             .withSimpleCard(appName, speechText)
             .getResponse();
     },
