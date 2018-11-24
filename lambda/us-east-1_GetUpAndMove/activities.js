@@ -70,18 +70,22 @@ const activities = [
         <say-as interpret-as="interjection">ribbit</say-as> <break time= "1s" />
         <say-as interpret-as="interjection">ribbit</say-as> <break time= "1s" />
         <break time= "1s" />`,
-    `Ok now lick your elbow! <break time= "2s" />.  
+    `Ok now lick your elbow! <break time= "2s" /> 
         <say-as interpret-as="interjection">just kidding</say-as>. Nobody can do that.
         <break time= "1s" />`,
     `March around in a circle.
-        March <break time= "0.5s" /> 
+        <break time= "0.5s" />
         March <break time= "0.2s" />
-        March <break time= "0.5s" />
+        March <break time= "0.2s" />
+        March <break time= "0.2s" />
+        March <break time= "0.2s" />
+        March <break time= "0.2s" />
         March. Keep going! <break time= "0.5s" />
-        March <break time= "0.5s" />
         March <break time= "0.2s" />
-        March <break time= "0.5s" />
-        March <break time= "0.5s" />
+        March <break time= "0.2s" />
+        March <break time= "0.2s" />
+        March <break time= "0.2s" />
+        March <break time= "0.2s" />
         <say-as interpret-as="interjection">well done</say-as>.
         <break time= "1s" />`,
     `Let's make some faces.
@@ -90,7 +94,8 @@ const activities = [
         Make a sad face <break time= "2s" />
         Make a angry face <break time= "2s" />
         Make a scary face <break time= "2s" />
-        Make a silly face <break time= "2s" />
+        Make a silly face <break time= "2s" /> 
+        Thats a great silly face. 
         <say-as interpret-as="interjection">well done</say-as>.
         <break time= "1s" />`,
     `Spin around 3 times.
@@ -119,40 +124,40 @@ const activities = [
         <break time= "1s" />`,
     `Let's really move. Shake your whole body and freeze when I say.
         <break time= "1s" /> 
-        Shake <break time= "1s" /> 
-        Shake <break time= "0.6s" />
-        Shake <break time= "1s" />
+        Shake Shake Shake Shake <break time= "0.6s" /> Shake Shake Shake
         <prosody volume="x-loud">Freeze</prosody> <break time= "1.5s" />
-        Shake <break time= "1s" />
-        Shake <break time= "1.1s" /> 
-        Shake <break time= "0.8s" />
-        Shake <break time= "1s" /> 
-        Shake <break time= "0.888s" /> 
+        Shake Shake <break time= "0.6s" /> Shake Shake 
         <prosody volume="x-loud">Freeze.</prosody> Try and hold still <break time= "1.5s" />
-        Shake <break time= "1s" />
-        Shake <break time= "1s" /> 
-        Shake <break time= "1s" />
+        Shake Shake Shake Shake  <break time= "0.6s" /> Shake Shake
         <prosody volume="x-loud">Freeze</prosody> <break time= "1.5s" />
         <say-as interpret-as="interjection">well done</say-as>. 
         <break time= "1s" />
         `,
     `Wiggle your arms.
         <break time= "1s" /> 
-        Wiggle <break time= "0.6s" /> 
-        Wiggle <break time= "1s" />
+        Wiggle Wiggle <break time= "0.6s" />
         <prosody volume="x-loud">Freeze</prosody> <break time= "1s" />
-        Wiggle <break time= "1s" />
-        Wiggle <break time= "0.7s" /> 
-        Wiggle <break time= "1s" />
-        Wiggle <break time= "0.4s" /> 
+        Wiggle Wiggle Wiggle <break time= "0.6s" /> Wiggle Wiggle <break time= "0.6s" />
         <prosody volume="x-loud">Freeze</prosody> <break time= "1s" />
-        Wiggle <break time= "1s" />
-        Wiggle <break time= "0.8s" /> 
-        Wiggle <break time= "1s" />
+        Wiggle Wiggle <break time= "0.4s" /> Wiggle <break time= "0.6s" />
         <prosody volume="x-loud">Freeze</prosody> <break time= "1s" />
         <say-as interpret-as="interjection">well done</say-as>. 
         <break time= "1s" />
+        `, 
+    `Crouch down.
+        <break time= "1s" /> 
+        Spring up like a kangroo as high as you can. Jump!
+        <break time= "1s" />
+        Crouch down again.
+        <break time= "1s" />
+        Spring up high.
+        <break time= "1s" />
+        Crouch down, last time.
+        <break time= "1s" />
+        Spring up as high as you can.
+        <break time= "1s" />
         `,
+        
 ];
 
 module.exports = activities;
