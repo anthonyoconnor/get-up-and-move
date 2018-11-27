@@ -146,15 +146,15 @@ const activities = [
         `, 
     `Crouch down.
         <break time= "1s" /> 
-        Spring up like a kangroo as high as you can. Jump!
+        Now spring up like a kangaroo as high as you can. 
         <break time= "1s" />
         Crouch down again.
         <break time= "1s" />
-        Spring up high.
+        Spring up high again.
         <break time= "1s" />
-        Crouch down, last time.
+        Crouch down for the last time.
         <break time= "1s" />
-        Spring up as high as you can.
+        Now spring up as high as you can.
         <break time= "1s" />
         `,
         
